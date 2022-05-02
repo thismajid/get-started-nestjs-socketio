@@ -7,7 +7,10 @@ export class MessagesService {
   messages: Message[] = [{ name: 'john', text: 'blah blah' }];
 
   create(createMessageDto: CreateMessageDto) {
-    return this.messages.push(createMessageDto);
+    const message = { ...createMessageDto };
+    this.messages.push(message);
+
+    return message;
   }
 
   findAll() {
