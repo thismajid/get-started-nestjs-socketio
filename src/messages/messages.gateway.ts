@@ -26,4 +26,7 @@ export class MessagesGateway {
 
   @SubscribeMessage('join')
   join() {}
+
+  @SubscribeMessage('typing')
+  async typing() {}
 }
