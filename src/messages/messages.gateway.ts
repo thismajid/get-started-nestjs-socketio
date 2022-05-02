@@ -23,4 +23,7 @@ export class MessagesGateway {
   findAll() {
     return this.messagesService.findAll();
   }
+
+  @SubscribeMessage('join')
+  join() {}
 }
